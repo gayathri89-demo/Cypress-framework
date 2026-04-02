@@ -1,5 +1,5 @@
 {
-  "navigationMenu": ["Markets", "Trade", "Futures", "Copy Trading"],
+  "navigationMenu": ["Home","Explore","MBG+","Wallet"],
   "tradingPairs": ["BTC/USDT", "ETH/USDT"],
   "aboutPageText": "Why MultiBank"
 }
