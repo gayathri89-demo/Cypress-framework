@@ -22,4 +22,14 @@
 //
 //
 // -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// Cypress.Commands.overwrite('visit', (originalFn, url, options)\
+//  => { ... })
+// Mock login by setting localStorage values that the app checks
+Cypress.Commands.add("mockLogin", () => {
+  window.localStorage.setItem("authToken", "fake-token");
+  window.localStorage.setItem("user", JSON.stringify({ username: "testUser" }));
+});
+
+Cypress.Commands.add("safeClick", selector => {
+  cy.get(selector).should("be.visible").click();
+});
